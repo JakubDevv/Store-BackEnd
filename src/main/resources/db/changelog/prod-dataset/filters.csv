@@ -1,0 +1,14 @@
+id,key,fk_filter_subcategory
+1,Parameter1,2
+2,Parameter2,2
+3,Parameter3,2
+4,Parameter4,1
+5,Parameter5,1
+6,Parameter6,3
+7,Parameter7,3
+8,Parameter8,3
+9,Parameter9,4
+10,Parameter10,4
+11,Parameter11,4
+12,Parameter12,5
+13,Parameter13,5

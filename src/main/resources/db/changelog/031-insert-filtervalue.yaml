@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - changeSet:
+      id: 31
+      author: jkb
+      changes:
+        - loadData:
+            file: db/changelog/prod-dataset/filtervalues.csv
+            tableName: filtervalue
+            separator: ','
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+              - column:
+                  name: value
+                  type: varchar(50)
+              - column:
+                  name: fk_filtervalue_filter
+                  type: bigint

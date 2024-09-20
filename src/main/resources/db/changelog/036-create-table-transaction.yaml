@@ -1,0 +1,52 @@
+databaseChangeLog:
+  - changeSet:
+      id: 36
+      author: jkb
+      changes:
+        - createTable:
+            tableName: transaction
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  startWith: 91
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: amount
+                  type: decimal
+                  constraints:
+                    nullable: true
+              - column:
+                  name: fk_transaction_order
+                  type: bigint
+                  constraints:
+                    nullable: true
+              - column:
+                  name: date
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: fk_transaction_users
+                  type: bigint
+                  constraints:
+                    nullable: true
+              - column:
+                  name: type
+                  type: varchar(10)
+                  constraints:
+                    nullable: false
+        - addForeignKeyConstraint:
+            baseTableName: transaction
+            baseColumnNames: fk_transaction_users
+            referencedTableName: _users
+            referencedColumnNames: id
+            constraintName: fk_transaction_users
+        - addForeignKeyConstraint:
+            baseTableName: transaction
+            baseColumnNames: fk_transaction_order
+            referencedTableName: orders_table
+            referencedColumnNames: id
+            constraintName: fk_transaction_order

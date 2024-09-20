@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - changeSet:
+      id: 26
+      author: jkb
+      changes:
+        - loadData:
+            file: db/changelog/prod-dataset/images.csv
+            tableName: image
+            separator: ','
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+              - column:
+                  name: name
+                  type: varchar(50)
+              - column:
+                  name: fk_image_product
+                  type: bigint

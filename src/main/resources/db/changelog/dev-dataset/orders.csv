@@ -1,0 +1,24 @@
+id,house_number,phone,fk_user_order,city,street,zipcode,country
+1,15,616835726,1,Wuhao,Browning,26-650,United Kingdom
+2,11,284792813,5,Hobonio,Harper,21-342,Poland
+3,24,691626571,10,Claveria,Nobel,37-621,Brazil
+4,5,381674904,5,Waihibar,Manley,41-511,Russia
+5,6,644429040,1,Moriya,Merchant,19-185,Spain
+6,21,443376747,7,Georgetown,Shasta,15-519,Norway
+7,42,398557390,1,Zagazig,Myrtle,28-210,Australia
+8,51,612130162,3,Kemil,Walton,99-821,Mexico
+9,51,462541324,6,Zhangyang,Delaware,88-124,Canada
+10,23,355497650,8,Balogo,Havey,15-651,India
+11,51,822532931,1,Petrovsk,Gulseth,51-124,Japan
+12,7,347420250,4,Aston,Sunfield,67-781,Iceland
+13,82,733740165,1,Sacramento,Waywood,33-521,Zimbabwe
+14,6,798616648,1,Dili,Lerdahl,43-501,Sudan
+15,4,542496254,15,Jiannan,Morning,51-101,Mali
+16,88,582268722,21,Shangyu,Rutledge,49-192,Egypt
+17,4,408661252,18,Parung,Brown,87-249,Mongolia
+18,11,200398872,19,Fuliang,Debra,40-129,Zimbabwe
+19,5,657396332,10,Ussel,Emmet,05-981,Mongolia
+20,21,127368466,4,Hayama,Atwood,64-143,Australia
+21,12,887481977,1,Banjarbaru,Florence,27-124,Poland
+22,32,675896299,4,Gonghe,Thierer,49-191,United Kingdom
+23,51,908437731,1,Longtou,Dorton,56-241,India

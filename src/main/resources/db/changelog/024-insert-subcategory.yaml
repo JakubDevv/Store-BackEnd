@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: 24
+      author: jkb
+      changes:
+        - loadData:
+            file: db/changelog/prod-dataset/subcategories.csv
+            tableName: subcategory
+            separator: ','
+            columns:
+              - column:
+                  name: name
+                  type: varchar(50)
+              - column:
+                  name: fk_subcategory_maincategory
+                  type: bigint

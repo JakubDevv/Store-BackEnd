@@ -1,0 +1,67 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: jkb
+      changes:
+        - createTable:
+            tableName: _users
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  startWith: 43
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: fk_user_company
+                  type: bigint
+                  constraints:
+                    nullable: true
+              - column:
+                  name: created
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: banned
+                  type: timestamp
+                  constraints:
+                    nullable:
+                      true
+              - column:
+                  name: first_name
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: last_name
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: balance
+                  type: decimal
+                  constraints:
+                    nullable: true
+              - column:
+                  name: password
+                  type: varchar(250)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: user_name
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: photo
+                  type: boolean
+                  constraints:
+                    nullable: false
+        - addForeignKeyConstraint:
+            baseTableName: _users
+            baseColumnNames: fk_user_company
+            referencedTableName: company
+            referencedColumnNames: id
+            constraintName: fk_user_company

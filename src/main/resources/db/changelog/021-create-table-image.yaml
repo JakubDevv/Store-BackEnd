@@ -1,0 +1,31 @@
+databaseChangeLog:
+  - changeSet:
+      id: 21
+      author: jkb
+      changes:
+        - createTable:
+            tableName: image
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: fk_image_product
+                  type: bigint
+                  constraints:
+                    nullable: true
+        - addForeignKeyConstraint:
+            baseTableName: image
+            baseColumnNames: fk_image_product
+            referencedTableName: product
+            referencedColumnNames: id
+            constraintName: fk_image_product

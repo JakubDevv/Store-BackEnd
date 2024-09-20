@@ -1,0 +1,14 @@
+id,key,fk_filter_subcategory
+1,Material,2
+2,Gender,2
+3,Style,2
+4,Material,1
+5,Color,1
+6,Style,3
+7,Material,3
+8,Color,3
+9,Pattern,4
+10,Gender,4
+11,Color,4
+12,Material,5
+13,Color,5

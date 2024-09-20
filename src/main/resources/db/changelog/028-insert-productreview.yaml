@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: 28
+      author: jkb
+      changes:
+        - loadData:
+            file: db/changelog/prod-dataset/productreview.csv
+            tableName: productreview
+            separator: ','
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+              - column:
+                  name: message
+                  type: varchar(50)
+              - column:
+                  name: rating
+                  type: integer
+              - column:
+                  name: userid
+                  type: bigint
+              - column:
+                  name: fk_review_product
+                  type: bigint
+              - column:
+                  name: sendtime
+                  type: timestamp

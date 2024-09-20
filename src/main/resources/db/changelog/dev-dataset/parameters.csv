@@ -1,0 +1,92 @@
+key,value,fk_parameter_product
+Material,Cotton,1
+Material,Polyester,2
+Material,Fleece,3
+Material,Wool,4
+Material,Wool,5
+Material,Polyester,6
+Material,Cotton,7
+Gender,Man,1
+Gender,Woman,2
+Gender,Woman,3
+Gender,Woman,4
+Gender,Woman,5
+Gender,Man,6
+Gender,Man,7
+Style,Slim Fit,1
+Style,Relaxed Fit,2
+Style,Slim Fit,3
+Style,Oversize,4
+Style,Oversize,5
+Style,Oversize,6
+Style,Slim Fit,7
+Material,Cotton,8
+Material,Linen,9
+Material,Linen,10
+Material,Wool,11
+Material,Wool,12
+Material,Polyester,13
+Material,Cotton,14
+Color,Blue,8
+Color,Green,9
+Color,White,10
+Color,Red,11
+Color,White,12
+Color,Black,13
+Color,Yellow,14
+Style,Slim Fit,15
+Style,Relaxed Fit,16
+Style,Slim Fit,17
+Style,Oversize,18
+Style,Oversize,19
+Style,Oversize,20
+Style,Slim Fit,21
+Color,Blue,15
+Color,Green,16
+Color,White,17
+Color,Red,18
+Color,Blue,19
+Color,Black,20
+Color,Blue,21
+Material,Cotton,15
+Material,Polyester,16
+Material,Nylon,17
+Material,Nylon,18
+Material,Fleece,19
+Material,Fleece,20
+Material,Cotton,21
+Pattern,Checkered,22
+Pattern,Striped,23
+Pattern,Striped,24
+Pattern,Striped,25
+Pattern,Checkered,26
+Pattern,Checkered,27
+Pattern,Checkered,28
+Color,Green,22
+Color,Green,23
+Color,Blue,24
+Color,Blue,25
+Color,Red,26
+Color,Black,27
+Color,Beige,28
+Gender,Man,22
+Gender,Man,23
+Gender,Man,24
+Gender,Man,25
+Gender,Man,26
+Gender,Man,27
+Gender,Man,28
+Material,Nylon,29
+Material,Polyester,30
+Material,Polyester,31
+Material,Leather,32
+Material,Nylon,33
+Material,Nylon,34
+Material,Nylon,35
+Color,Green,29
+Color,Green,30
+Color,Blue,31
+Color,Black,32
+Color,Black,33
+Color,Black,34
+Color,Brown,35

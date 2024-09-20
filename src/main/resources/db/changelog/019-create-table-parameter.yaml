@@ -1,0 +1,36 @@
+databaseChangeLog:
+  - changeSet:
+      id: 19
+      author: jkb
+      changes:
+        - createTable:
+            tableName: parameter
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: key
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: value
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: fk_parameter_product
+                  type: bigint
+                  constraints:
+                    nullable: true
+        - addForeignKeyConstraint:
+            baseTableName: parameter
+            baseColumnNames: fk_parameter_product
+            referencedTableName: product
+            referencedColumnNames: id
+            constraintName: fk_parameter_product

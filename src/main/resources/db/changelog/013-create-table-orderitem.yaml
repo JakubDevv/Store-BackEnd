@@ -1,0 +1,53 @@
+databaseChangeLog:
+  - changeSet:
+      id: 12
+      author: jkb
+      changes:
+        - createTable:
+            tableName: orderitem
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                  startWith: 44
+              - column:
+                  name: quantity
+                  type: integer
+                  constraints:
+                    nullable: false
+              - column:
+                  name: price
+                  type: decimal
+                  constraints:
+                    nullable: false
+              - column:
+                  name: fk_product_orderitem
+                  type: bigint
+                  constraints:
+                    nullable: true
+              - column:
+                  name: fk_orderitem_orders_table
+                  type: bigint
+                  constraints:
+                    nullable: true
+              - column:
+                  name: size
+                  type: varchar(50)
+                  constraints:
+                    nullable: true
+        - addForeignKeyConstraint:
+            baseTableName: orderitem
+            baseColumnNames: fk_product_orderitem
+            referencedTableName: product
+            referencedColumnNames: id
+            constraintName: fk_product_orderitem
+        - addForeignKeyConstraint:
+            baseTableName: orderitem
+            baseColumnNames: fk_orderitem_orders_table
+            referencedTableName: orders_table
+            referencedColumnNames: id
+            constraintName: fk_orderitem_orders_table

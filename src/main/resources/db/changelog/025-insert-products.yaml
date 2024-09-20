@@ -1,0 +1,34 @@
+databaseChangeLog:
+  - changeSet:
+      id: 25
+      author: jkb
+      changes:
+        - loadData:
+            file: db/changelog/prod-dataset/products.csv
+            tableName: product
+            separator: ';'
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+              - column:
+                  name: name
+                  type: varchar(50)
+              - column:
+                  name: description
+                  type: varchar(255)
+              - column:
+                  name: price
+                  type: decimal
+              - column:
+                  name: discount_price
+                  type: decimal
+              - column:
+                  name: sales
+                  type: integer
+              - column:
+                  name: fk_product_company
+                  type: bigint
+              - column:
+                  name: created
+                  type: timestamp

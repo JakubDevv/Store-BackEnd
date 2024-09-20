@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: 37
+      author: jkb
+      changes:
+        - loadData:
+            file: db/changelog/prod-dataset/transactions.csv
+            tableName: transaction
+            separator: ';'
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+              - column:
+                  name: amount
+                  type: decimal
+              - column:
+                  name: fk_transaction_order
+                  type: bigint
+              - column:
+                  name: date
+                  type: timestamp
+              - column:
+                  name: fk_transaction_users
+                  type: bigint
+              - column:
+                  name: type
+                  type: varchar(50)

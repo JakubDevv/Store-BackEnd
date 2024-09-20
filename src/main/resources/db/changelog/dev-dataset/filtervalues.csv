@@ -1,0 +1,49 @@
+value,fk_filtervalue_filter
+Cotton,1
+Polyester,1
+Fleece,1
+Wool,1
+Woman,2
+Man,2
+Slim Fit,3
+Relaxed Fit,3
+Oversize,3
+Cotton,4
+Linen,4
+Polyester,4
+Wool,4
+Blue,5
+Green,5
+White,5
+Red,5
+Yellow,5
+Black,5
+Slim Fit,6
+Relaxed Fit,6
+Oversize,6
+Cotton,7
+Polyester,7
+Nylon,7
+Fleece,7
+Blue,8
+Green,8
+White,8
+Red,8
+Blue,8
+Black,8
+Checkered,9
+Striped,9
+Green,11
+Blue,11
+Red,11
+Black,11
+Beige,11
+Man,10
+Woman,10
+Nylon,12
+Polyester,12
+Leather,12
+Green,13
+Blue,13
+Black,13
+Brown,13

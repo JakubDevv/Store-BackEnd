@@ -1,0 +1,31 @@
+databaseChangeLog:
+  - changeSet:
+      id: 16
+      author: jkb
+      changes:
+        - createTable:
+            tableName: filtervalue
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: value
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: fk_filtervalue_filter
+                  type: bigint
+                  constraints:
+                    nullable: true
+        - addForeignKeyConstraint:
+            baseTableName: filtervalue
+            baseColumnNames: fk_filtervalue_filter
+            referencedTableName: filter
+            referencedColumnNames: id
+            constraintName: fk_filtervalue_filter

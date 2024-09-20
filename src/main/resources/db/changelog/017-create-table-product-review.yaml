@@ -1,0 +1,46 @@
+databaseChangeLog:
+  - changeSet:
+      id: 17
+      author: jkb
+      changes:
+        - createTable:
+            tableName: productreview
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: message
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: rating
+                  type: integer
+                  constraints:
+                    nullable: false
+              - column:
+                  name: userid
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: fk_review_product
+                  type: bigint
+                  constraints:
+                    nullable: true
+              - column:
+                  name: sendtime
+                  type: timestamp
+                  constraints:
+                    nullable: false
+        - addForeignKeyConstraint:
+            baseTableName: productreview
+            baseColumnNames: fk_review_product
+            referencedTableName: product
+            referencedColumnNames: id
+            constraintName: fk_review_product

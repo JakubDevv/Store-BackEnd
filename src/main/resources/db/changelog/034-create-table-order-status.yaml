@@ -1,0 +1,43 @@
+databaseChangeLog:
+  - changeSet:
+      id: 34
+      author: jkb
+      changes:
+        - createTable:
+            tableName: order_status
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: status
+                  type: varchar(50)
+              - column:
+                  name: time
+                  type: timestamp
+              - column:
+                  name: fk_order_status_order
+                  type: bigint
+                  constraints:
+                    nullable: true
+              - column:
+                  name: fk_order_status_orderitem
+                  type: bigint
+                  constraints:
+                    nullable: true
+        - addForeignKeyConstraint:
+            baseTableName: order_status
+            baseColumnNames: fk_order_status_order
+            referencedTableName: orders_table
+            referencedColumnNames: id
+            constraintName: fk_order_status_order
+        - addForeignKeyConstraint:
+            baseTableName: order_status
+            baseColumnNames: fk_order_status_orderitem
+            referencedTableName: orderitem
+            referencedColumnNames: id
+            constraintName: fk_order_status_orderitem

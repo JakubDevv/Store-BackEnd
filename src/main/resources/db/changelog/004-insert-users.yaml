@@ -1,0 +1,40 @@
+databaseChangeLog:
+  - changeSet:
+      id: 4
+      author: jkb
+      changes:
+        - loadData:
+            file: db/changelog/prod-dataset/users.csv
+            tableName: _users
+            separator: ';'
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+              - column:
+                  name: fk_user_company
+                  type: bigint
+              - column:
+                  name: created
+                  type: timestamp
+              - column:
+                  name: banned
+                  type: timestamp
+              - column:
+                  name: first_name
+                  type: varchar(50)
+              - column:
+                  name: last_name
+                  type: varchar(50)
+              - column:
+                  name: password
+                  type: varchar(50)
+              - column:
+                  name: user_name
+                  type: varchar(50)
+              - column:
+                  name: balance
+                  type: decimal
+              - column:
+                  name: photo
+                  type: boolean

@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: 33
+      author: jkb
+      changes:
+        - loadData:
+            file: db/changelog/prod-dataset/orderitems.csv
+            tableName: orderitem
+            separator: ','
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+              - column:
+                  name: quantity
+                  type: integer
+              - column:
+                  name: price
+                  type: decimal
+              - column:
+                  name: fk_product_orderitem
+                  type: bigint
+              - column:
+                  name: fk_orderitem_orders_table
+                  type: bigint
+              - column:
+                  name: size
+                  type: varchar(50)

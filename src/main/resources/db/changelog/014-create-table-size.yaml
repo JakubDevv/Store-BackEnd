@@ -1,0 +1,36 @@
+databaseChangeLog:
+  - changeSet:
+      id: 11
+      author: jkb
+      changes:
+        - createTable:
+            tableName: size
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: quantity
+                  type: integer
+                  constraints:
+                    nullable: false
+              - column:
+                  name: sizevalue
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: fk_size_product
+                  type: bigint
+                  constraints:
+                    nullable: true
+        - addForeignKeyConstraint:
+            baseTableName: size
+            baseColumnNames: fk_size_product
+            referencedTableName: product
+            referencedColumnNames: id
+            constraintName: fk_size_product

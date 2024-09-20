@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: 27
+      author: jkb
+      changes:
+        - loadData:
+            file: db/changelog/prod-dataset/parameters.csv
+            tableName: parameter
+            separator: ','
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+              - column:
+                  name: key
+                  type: varchar(50)
+              - column:
+                  name: value
+                  type: varchar(255)
+              - column:
+                  name: fk_parameter_product
+                  type: bigint

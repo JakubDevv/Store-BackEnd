@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: 35
+      author: jkb
+      changes:
+        - loadData:
+            file: db/changelog/prod-dataset/orderstatus.csv
+            tableName: order_status
+            separator: ','
+            columns:
+              - column:
+                  name: status
+                  type: varchar(50)
+              - column:
+                  name: time
+                  type: timestamp
+              - column:
+                  name: fk_order_status_order
+                  type: bigint
+              - column:
+                  name: fk_order_status_orderitem
+                  type: bigint

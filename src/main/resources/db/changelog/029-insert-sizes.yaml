@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: 29
+      author: jkb
+      changes:
+        - loadData:
+            file: db/changelog/prod-dataset/sizes.csv
+            tableName: size
+            separator: ','
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+              - column:
+                  name: quantity
+                  type: integer
+              - column:
+                  name: sizevalue
+                  type: varchar(50)
+              - column:
+                  name: fk_size_product
+                  type: bigint

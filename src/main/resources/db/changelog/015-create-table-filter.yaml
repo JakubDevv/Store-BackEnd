@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - changeSet:
+      id: 15
+      author: jkb
+      changes:
+        - createTable:
+            tableName: filter
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                  startWith: 14
+              - column:
+                  name: key
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: fk_filter_subcategory
+                  type: bigint
+                  constraints:
+                    nullable: true

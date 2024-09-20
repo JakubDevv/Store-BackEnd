@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: 7
+      author: jkb
+      changes:
+        - loadData:
+            file: db/changelog/prod-dataset/roles.csv
+            tableName: role
+            separator: ','
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+              - column:
+                  name: name
+                  type: varchar(50)

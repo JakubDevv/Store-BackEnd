@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - changeSet:
+      id: 9
+      author: jkb
+      changes:
+        - createTable:
+            tableName: maincategory
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                  startWith: 3
+              - column:
+                  name: name
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: deleted
+                  type: timestamp
+                  constraints:
+                    nullable: true
